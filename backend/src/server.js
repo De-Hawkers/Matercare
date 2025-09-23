@@ -32,3 +32,7 @@ CONNECTDB().then(() => {
     console.log(`Server has started on Port: ${PORT}`);
   });
 });
+
+
+//qbWnOzdeR23L1K5C
+//mubaraqadeniyi159_db_user
