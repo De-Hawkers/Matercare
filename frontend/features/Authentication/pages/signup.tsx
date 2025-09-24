@@ -4,6 +4,7 @@ import Image from "next/image";
 import React from "react";
 
 
+
 const Signup = () => {
   return (
     <div className="flex flex-col justify-center items-center my-10">
@@ -28,10 +29,12 @@ const Signup = () => {
 
       <form action="" className="mt-5">
         <div className="flex items-center justify-center">
+        
           <input
             type="text"
             placeholder="Fullname"
             className="border border-[#32c232] outline-none px-5 rounded-lg py-2 font sm:w-[400px] w-[350px]"
+        
           />
         </div>
 
