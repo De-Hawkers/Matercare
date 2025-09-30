@@ -18,6 +18,10 @@ const userSchema = new mongoose.Schema(
       required: [true, "password is required"],
       minlength: [6, "Password must be atleast 6 characters long"],
     },
+    isPregnant: { type: Boolean, default: true },
+    EDD: { type: Date },
+
+    //EDD means (expected date of delivery)
   },
   { timestamps: true }
 );
