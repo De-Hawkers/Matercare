@@ -1,4 +1,4 @@
-import Contact from "../models/emergency.model";
+import Contact from "../models/emergency.model.js";
 import sendSms from "../lib/twilioService.js";
 
 //add contact

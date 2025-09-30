@@ -1,6 +1,7 @@
 
 import { assets } from "@/app/assets/assets";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 
@@ -58,6 +59,9 @@ const Signup = () => {
           </button>
         </div>
       </form>
+      <div>
+        <p>Already Have an account? <Link className="text-blue-400 underline" href="/login"> Login</Link></p> 
+      </div>
     </div>
   );
 };
