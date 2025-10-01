@@ -13,7 +13,7 @@ const Signup = () => {
   const [password, setPassword] = useState("")
   const [loading, setLoading] = useState(false);
 
-  const baseUrl:string = "http://localhost:4000"
+  const baseUrl:string | undefined = process.env.NEXT_PUBLIC_API_URL;
   
   
   const HandleSubmit = async (e:React.FormEvent<HTMLFormElement>) => {
