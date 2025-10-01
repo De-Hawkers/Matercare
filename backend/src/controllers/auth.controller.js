@@ -57,7 +57,6 @@ export const signupHandler = async (req, res) => {
       //send response
       res.status(201).json({
         user: {
-          _id: user._id,
           fullName: user.fullName,
           phoneNumber: user.phoneNumber,
         },
@@ -65,8 +64,10 @@ export const signupHandler = async (req, res) => {
       });
     }
   } catch (err) {
-    console.error("Error creating account", err.message);
-    res.status(500).json({ message: "Internal server error" });
+    res.status(500).json({ 
+      success:false,
+      message: "Internal server error" + err.message 
+    });
   }
 };
 

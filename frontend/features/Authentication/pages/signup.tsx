@@ -4,16 +4,21 @@ import { assets } from "@/app/assets/assets";
 import axios from "axios";
 import Image from "next/image";;
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React, { useState } from "react";
 
 
+
 const Signup = () => {
+  const router = useRouter();
   const [fullName, setFullName] = useState("")
   const [phoneNumber, setPhoneNumber] = useState("");
   const [password, setPassword] = useState("")
   const [loading, setLoading] = useState(false);
 
   const baseUrl:string | undefined = process.env.NEXT_PUBLIC_API_URL;
+   
+
   
   
   const HandleSubmit = async (e:React.FormEvent<HTMLFormElement>) => {
@@ -35,13 +40,18 @@ setLoading(true)
 
       if (response.status === 201) {
           alert("registration Successfull")
+           router.push("/login");
+         
+          setFullName("")
+          setPhoneNumber("")
+          setPassword("")
+         
       } else {
         alert("an error occured")
       }
 
-      setFullName("")
-      setPhoneNumber("")
-      setPassword("")
+
+     
     } catch (error: unknown) {
       if (axios.isAxiosError(error)) {
         if (error.response) {
